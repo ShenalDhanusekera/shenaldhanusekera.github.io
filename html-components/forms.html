@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Forms</title>
+</head>
+<body>
+    <!-- 
+        This Form is used for shipping something to a customer. The user has to input thier address, postal code,
+        and city. Then the user must select one of the three shipping methods from the drop down and also the user
+        must selcet one of the three payment methods. The user can also leave a comment if they wish to in the
+        Comments area. Then finally the user can subscribe to email-updates and allow the website to save the
+        customer's paymen information.
+        -->
+    <form method="get">
+        <label for="address">Address:</label>
+        <input type="text" name="address" placeholder="Enter Your Address" size="30" maxlength="30" id="address" />
+        
+        <label for="postalcode">Postal Code:</label>
+        <input type="text" name="postalcode" placeholder="Enter Your Postal Code" size="30" maxlength="50" id="postalcode" />
+       
+         <label for="city">City:</label>
+        <input type="text" name="city" placeholder="Enter Your City" size="30" maxlength="50" id="city" />
+
+        <p><b><u>Choose a Shipping Method</u></b></p>
+        <select name="shipping" id="shipping">
+            <option value="standard">Standard Shipping</option>
+            <option value="oneday">One Day Shipping</option>
+            <option value="twoday">Two Day Shipping</option>
+        </select>
+
+        <p><b><u>Select a Payment Method</u></b></p>
+        <label><input type="radio" name="payment_method" value="paypal" checked/>PayPal</label>
+        <label><input type="radio" name="payment_method" value="debitcard" />Debit Card</label>
+        <label><input type="radio" name="payment_method" value="creditcard" />Credit Card</label>
+
+       <br /> <textarea rows="4" cols="40" name="comments" id="comments">This area is for Comments</textarea>
+
+       <br /> <label><input type="checkbox" name="email-updates" checked />Sign Me Up For Email Updates</label>
+        <label><input type="checkbox" name="payment-info" checked />Save My Payment Information</label>
+
+        <br /><input type="submit" value="Submit" />
+
+        <p><strike>This Website Is For Testing Purposes Only</strike></p>
+    </form>
+
+</body>
+</html>
