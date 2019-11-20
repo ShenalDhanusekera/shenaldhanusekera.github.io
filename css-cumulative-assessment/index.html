@@ -1,0 +1,205 @@
+﻿<!--
+    Name: Shenal Dhanusekera
+    Course: Software Development 20S
+    Teacher: Mr.Hardman
+    School: Pembina Trails Early College
+    Date Last Modified: 2019-11-18
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pembina Trails Early College</title>
+	<meta charset="utf-8" />
+    <link rel="stylesheet" href="StyleSheet.css" type="text/css">
+    <style>
+        #ptechead {
+            background-color: #ffffff;
+            margin: 0;
+            width: auto;
+            height: 740px;
+            border-top: 2px solid black;
+        }
+
+        #ptechead h1{
+            font-size: 50px;
+            color: #472c7b;
+            font-weight: bold;
+            margin-top: 23%;
+            display: flex;
+            justify-content: center;
+            animation: headeranimation 2s ease-in-out;
+            -webkit-animation: headeranimation 2s ease-in-out;
+            -moz-animation: headeranimation 2s ease-in-out;
+        }
+
+        #ptechead p{
+            font-size: 20px;
+            color: #000000;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+        }
+
+        @keyframes headeranimation {
+            0%{
+                letter-spacing: 10px;
+            }
+            110%{
+                letter-spacing: 1px;
+            }
+        }
+
+        #blog {
+            width: auto;
+            height: 520px;
+            display: flex;
+            justify-content: center;
+            background-color: #F8F8F8;
+        }
+
+        #blog1 {
+            border: 1px solid #e0e0e0;
+            float:left;
+            width: 23%;
+            margin: 35px;
+            padding: 20px 20px 20px 20px;
+        }
+       
+        #blog2 {
+            border: 1px solid #e0e0e0;
+            float:left;
+            width: 23%;
+            margin: 35px;
+            padding: 20px 20px 20px 20px;
+        }
+        
+        #blog3 {
+            border: 1px solid #e0e0e0;
+            float:right;
+            width: 23%;
+            margin: 35px;
+            padding: 20px 20px 20px 20px;
+        }
+
+        #blog1:hover, #blog2:hover, #blog3:hover {
+            background-color: #E0E0E0;
+            transition: ease-in-out 1s;
+            -webkit-transition: ease-in-out 1s;
+            -moz-transition: ease-in-out 1s;
+            cursor: pointer;
+        }
+
+        #container {
+            position: relative;
+        }
+
+        #overlay {
+            position: absolute;
+            bottom: 100%;
+            background-color: #472c7b;
+            overflow: hidden;
+            width: 100%;
+            height:0;
+            transition: 1s linear;
+            -webkit-transition: 1s linear;
+            -moz-transition: 1s linear;
+        }
+
+        #container:hover #overlay {
+            bottom: 0;
+            height: 100%;
+        }
+
+        #text {
+            white-space: nowrap;
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            overflow: hidden;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+        }
+
+        #image {
+            width: 100%;
+            height: 175px;
+        }
+
+        #boldtext {
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html" id="active">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+            <li><a href="whatweoffer.html">What We Offer</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div id="ptechead">
+            <h1>Pembina Trails Early College</h1>
+            <p>"We do school differently"</p>
+        </div>
+        <div id="blog">
+            <div id="blog1">
+                <div id="container">
+                    <img src="Images/blog1.jpg" id="image" />
+                    <div id="overlay">
+                        <div id="text">SISLER GAME ON 2019</div>
+                    </div>
+                </div>
+                <h2>Sisler Game On!</h2>
+                <p>
+                    Game On is a collaborative game jam which teaches students from grade <span id="boldtext">4 – 12,</span>
+                    coding, prototyping, game design and art from local and national industry leaders.
+                    This two-day celebration of techno-creative skills is open to all Manitoba schools
+                    and put on by Sisler High School's Interactive Digital Media Program.
+                </p>
+            </div>
+            <div id="blog2">
+                <div id="container">
+                    <img src="Images/blog2.jpg" id="image" />
+                    <div id="overlay">
+                        <div id="text">TECHNOVATION CAMP 2019</div>
+                    </div>
+                </div>
+                <h2>Technovation Camp!</h2>
+                <p>
+                    Pembina Trails School Division recognizes the importance of technology and innovative thinking in a 21st century learner.
+                    The division is once again excited to announce a unique opportunity for students who show great interest and promise in this 
+                    field.The <span id="boldtext">PTEC TECHNOVATION CAMP</span> will be held on February 7 & 8.
+                </p>
+            </div>
+            <div id="blog3">
+                <div id="container">
+                    <img src="Images/blog3.jpg" id="image" />
+                    <div id="overlay">
+                        <div id="text">SMARTPARK 2019</div>
+                    </div>
+                </div>
+                <h2>Moving To Smartpark!</h2>
+                <p>
+                    PTEC is officially a school in Pembina Trails School Division and we are excited to welcome our 2019-2020 students to 
+                    their brand new classroom located on the University of Manitoba's campus, <span id="boldtext">SMARTPARK</span>. We are very optimistic for the unique 
+                    learning opportunity that our students have in their future.
+                </p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright &copy; 2019 Pembina Trails Early College. All rights reserved. <span id="footerdesigner">Website Designed By Shenal Dhanusekera</span></p>
+    </footer>
+</body>
+</html>
