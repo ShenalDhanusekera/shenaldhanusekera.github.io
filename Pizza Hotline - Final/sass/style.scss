@@ -1,26 +1,11 @@
-﻿* {
-    margin: 0;
-    text-transform: capitalize;
-    font-family: "Century Gothic", sans-serif;
-}
-
-h1 {
-    position: relative;
-    float: left;
-    background-color: black;
-    color: white;
-    padding: 8px 100px 8px 8px;
-    font-size: 22px;
-    display: inline-block;
-    font-family: 'Rancho', cursive;
-}
-
-.topnav {
+﻿.topnav {
     overflow: hidden;
     background-color: black;
     padding: 10px;
     display: flex;
     justify-content: center;
+    position: fixed;
+    width: 100%;
 }
 
 .topnav a {
@@ -47,7 +32,7 @@ h1 {
     display: none;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 750px) {
     .topnav {
         overflow: hidden;
         float: left;
@@ -55,32 +40,29 @@ h1 {
         background-color: black;
         width: 100%;
     }
+
     .topnav a {
         display: none;
     }
+
     .topnav a.icon {
         float: right;
         display: block;
         background-color: black;
     }
-    h1 {
-        position: relative;
-        right: 0;
-        background-color: black;
-        color: white;
-        font-size: 22px;
-    }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 750px) {
     .topnav.responsive {
         position: relative;
     }
+
     .topnav.responsive .icon {
         position: absolute;
         right: 0;
         top: 0;
     }
+
     .topnav.responsive a {
         float: none;
         display: block;
