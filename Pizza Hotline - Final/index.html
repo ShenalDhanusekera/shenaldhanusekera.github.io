@@ -6,6 +6,89 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+
+    <style>
+        #top {
+            background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(images/headerimg.jpeg);
+            height: 850px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #toph1 {
+            text-align: center;
+            padding-top: 350px;
+            color: #ffffff;
+            font-family: 'Rancho', cursive;
+            font-size: 70px;
+            animation: textanimation 2s ease-in-out;
+            -webkit-animation: textanimation 2s ease-in-out;
+            -moz-animation: textanimation 2s ease-in-out;
+            -o-animation: textanimation 2s ease-in-out;
+        }
+
+        @keyframes textanimation {
+            0% {
+                letter-spacing: 10px;
+            }
+
+            110% {
+                letter-spacing: 1px;
+            }
+        }
+
+        #topp {
+            text-align: center;
+            color: #ffffff;
+            font-family: 'Rancho', cursive;
+            font-size: 22px;
+            animation: textanimation2 2s ease-in-out;
+            -webkit-animation: textanimation2 2s ease-in-out;
+            -moz-animation: textanimation2 2s ease-in-out;
+            -o-animation: textanimation2 2s ease-in-out;
+        }
+
+        @keyframes textanimation2 {
+            0% {
+                letter-spacing: 10px;
+            }
+
+            110% {
+                letter-spacing: 1px;
+            }
+        }
+
+        #quote {
+            width: auto;
+            height: 250px;
+            font-size: 25px;
+            text-align: center;
+            padding-top: 50px;
+            background-color: #ffffff;
+            overflow: hidden;
+        }
+
+        #btn {
+            background-color: #ffffff;
+            color: black;
+            border: 2px solid #000000;
+            font-size: 20px;
+            border-radius: 3px;
+            padding: 10px;
+            margin-top: 30px;
+            transition: 2s;
+            -webkit-transition: 2s;
+            -moz-transition: 2s;
+            -o-transition: 2s;
+        }
+
+            #btn:hover {
+                background-color: #000000;
+                color: white;
+            }
+    </style>
 </head>
 <body>
     <div class="topnav" id="myTopnav">
@@ -13,15 +96,15 @@
         <a href="menu.html">Menu</a>
         <a href="order.html">Order Online</a>
         <a href="#">Promotions</a>
-        <a href="#">Rewards</a>
+        <a href="#">Gallery</a>
         <a href="contact.html">Contact Us</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>
     </div>
     <div id="top">
-    <h1 id="toph1">Pizza Hotline</h1>
-    <p id="topp">Saucy Little Number</p>
+        <h1 id="toph1">Pizza Hotline</h1>
+        <p id="topp">Saucy Little Number</p>
     </div>
     <div id="quote">
         <p>Placing an online order for Delivery or Call Ahead</p>

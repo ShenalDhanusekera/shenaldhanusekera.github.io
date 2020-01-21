@@ -5,7 +5,8 @@
   display: flex;
   justify-content: center;
   position: fixed;
-  width: 100%; }
+  width: 100%;
+  z-index: 1; }
 
 .topnav a {
   float: left;
@@ -27,7 +28,7 @@
 .topnav .icon {
   display: none; }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1120px) {
   .topnav {
     overflow: hidden;
     float: left;
@@ -41,7 +42,7 @@
     display: block;
     background-color: black; } }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1120px) {
   .topnav.responsive {
     position: relative; }
   .topnav.responsive .icon {
