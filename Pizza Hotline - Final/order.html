@@ -13,6 +13,7 @@
             box-sizing: border-box;
         }
 
+        /* Header Image */
         #otop {
             background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(images/oheaderimg.jpeg);
             height: 850px;
@@ -37,67 +38,86 @@
             font-size: 20px;
         }
 
-        div {
-            border: solid medium transparent;
+        /* From Styling */
+        form {
+            text-align: center;
+            max-width: 600px;
+            padding: 10px 20px;
+            background: #fef3d3;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: Georgia, "Times New Roman", Times, serif;
         }
 
-            div#id-errors {
-                color: red;
-                display: none;
-                margin-left: 1em;
-                border: thin solid red;
-                width: 25em;
-            }
+        /* Text in Form Styling */
+        #formheader {
+            padding: 40px 40px 50px 40px;
+            font-size: 24px;
+            text-align: center;
+        }
 
-                div#id-errors a {
-                    color: red;
-                }
+        #formheader2 {
+            padding: 10px 10px 20px 10px;
+            font-size: 24px;
+            text-align: center;
+        }
 
-        h2, h3 {
+        #formheader3 {
+            padding: 20px;
+            font-size: 18px
+        }
+
+        #vegitems2, #vegitems3 {
+            display: inline-block;
+        }
+
+        /* Form Information Styling */
+        .finfo {
+            font-family: Georgia, "Times New Roman", Times, serif;
+            background: #ffffff;
+            border: none;
+            border-radius: 4px;
+            font-size: 15px;
             margin: 0;
-            padding: 0;
-            margin-top: 1em;
+            outline: 0;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            background-color: #000000;
+            color: #ffffff;
+            margin-bottom: 30px;
         }
 
-        label {
+        /* Form Submit Button Styling */
+        #formsubmit {
+            position: relative;
             display: block;
-            margin: 0;
-            padding: 0;
-            font-weight: normal;
-        }
-
-        div.text,
-        div.select,
-        input[type="submit"] {
-            margin-top: 0.5em;
-        }
-
-        label.error,
-        lanel.noerror {
-            display: inline;
-        }
-
-        label.error {
-            color: red;
-            border: thin solid red;
-            padding: 0.25em;
-        }
-
-        label.noerror {
-            color: transparent;
-            border: thin solid transparent;
-            padding: 0.25em;
+            padding: 19px 39px 18px 39px;
+            color: #FFF;
+            margin: 0 auto;
+            background: #000000;
+            font-size: 18px;
+            text-align: center;
+            font-style: normal;
+            width: 100%;
+            border: 1px solid #000000;
+            border-width: 1px 1px 3px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
     <div class="topnav" id="myTopnav">
-        <a href="index.html" class="active">Home</a>
+        <a href="index.html">Home</a>
         <a href="menu.html">Menu</a>
-        <a href="order.html">Order Online</a>
+        <a href="order.html" class="active">Order Online</a>
         <a href="#">Promotions</a>
         <a href="#">Gallery</a>
         <a href="contact.html">Contact Us</a>
+        <!-- Hamburger Menu -->
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>
@@ -107,25 +127,98 @@
         <p id="otopp">Placing and online order is easier than ever</p>
     </div>
     <div>
-        <form action="/action_page.php">
-            <h4>First Name:</h4>
-            <input type="text" name="firstname" placeholder="First Name" />
-            <h4>Last Name:</h4>
-            <input type="text" name="lastname" placeholder="Last Name" />
-            <h4>Address:</h4>
-            <input type="text" name="address" placeholder="Address" />
-            <h4>Phone Number:</h4>
-            <input type="tel" name="phonenumber" placeholder="Phone Number" />
-            <h4>Method:</h4>
-            <select name="Method">
+        <!-- Order Form -->
+        <form>
+            <h4 id="formheader">Infromation</h4>
+            <input type="text" name="firstname" class="finfo" placeholder="First Name" />
+            <input type="text" name="lastname" class="finfo" placeholder="Last Name" />
+            <input type="text" name="address" class="finfo" placeholder="Address" />
+            <input type="tel" name="phonenumber" class="finfo" maxlength="10" placeholder="Phone Number" />
+            
+            <h4 id="formheader2">Method</h4>
+            <!-- Delivery and Takeout Option Dropdown -->
+            <select name="Method" class="finfo">
                 <option selected></option>
                 <option value="takeout">Takeout</option>
                 <option value="delivery">Delivery</option>
             </select>
+
+            <!-- Pizza Custimizing Options Radio Buttons -->
+            <h4 id="formheader2">Customize Your Pizza</h4>
+            <h4>Choose Your Size</h4>
+            <div id="sizes">
+                <input type="radio" name="size" value="medium" /> Medium <br />
+                <input type="radio" name="size" value="xlarge" /> X-Large
+            </div>
+            <div id="crustitems">
+                <h4>Choose Your Crust</h4>
+                <input type="radio" name="crust" value="regular" /> Regular <br />
+                <input type="radio" name="crust" value="thin" /> Thin <br />
+                <input type="radio" name="crust" value="cauliflower" /> Cauliflower <br />
+                <input type="radio" name="crust" value="whole" /> Whole Wheat
+            </div>
+            <h4 id="formheader3">Choose Your Toppings</h4>
+            <div id="sauceitems">
+                <h4>Sauces:</h4>
+                <input type="checkbox" name="sauces" value="bbq" /> BBQ <br />
+                <input type="checkbox" name="sauces" value="ranch" /> Ranch <br />
+                <input type="checkbox" name="sauces" value="sanmarzano" /> San Marzano <br />
+                <input type="checkbox" name="sauces" value="vineripenedtomato" /> Vine-Ripened Tomato
+            </div>
+            <div>
+                <div id="meatitems">
+                    <h4>Meats:</h4>
+                    <input type="checkbox" name="meat" value="ham" /> Ham <br />
+                    <input type="checkbox" name="meat" value="pepperoni" /> Pepperoni <br />
+                    <input type="checkbox" name="meat" value="genoasalami" /> Genoa Salami <br />
+                    <input type="checkbox" name="meat" value="groundbacon" /> Ground Bacon <br />
+                    <input type="checkbox" name="meat" value="grilledchicken" /> Grilled Chicken <br />
+                    <input type="checkbox" name="meat" value="seasonedbeef" /> Seasoned Beef <br />
+                    <input type="checkbox" name="meat" value="italiansausage" /> Italian Sausage
+                </div>
+                <div id="vegitems">
+                    <h4>Vegetables</h4>
+                    <div id="vegitems2">
+                        <input type="checkbox" name="veg" value="artichokeheart" /> Artichoke Heart <br />
+                        <input type="checkbox" name="veg" value="greenpepper" /> Green Pepper <br />
+                        <input type="checkbox" name="veg" value="jalapenopepper" /> Jalapeno Pepper <br />
+                        <input type="checkbox" name="veg" value="hotbananapepper" /> Hot Banana Pepper <br />
+                        <input type="checkbox" name="veg" value="roastedredpepper" /> Roasted Red Pepper <br />
+                        <input type="checkbox" name="veg" value="whiteonion" /> White Onion <br />
+                        <input type="checkbox" name="veg" value="redonion" /> Red Onion <br />
+                    </div>
+                    <div id="vegitems3">
+                        <input type="checkbox" name="veg" value="garlic" /> Garlic <br />
+                        <input type="checkbox" name="veg" value="freshtomato" /> Fresh Tomato <br />
+                        <input type="checkbox" name="veg" value="sundriedtomato" /> Sun-Dried Tomato <br />
+                        <input type="checkbox" name="veg" value="mushroom" /> Mushroom <br />
+                        <input type="checkbox" name="veg" value="marinatedeggplant" /> Marinated Eggplant <br />
+                        <input type="checkbox" name="veg" value="pineapple" /> Pineapple <br />
+                        <input type="checkbox" name="veg" value="spinach" /> Spinach <br />
+                    </div>
+                    <br /><input type="checkbox" name="veg" value="kalamataslicedolive" /> Kalamata Sliced Olive
+                </div>
+            </div>
+            <div id="cheeseitems">
+                <h4>Cheese:</h4>
+                <input type="checkbox" name="cheese" value="feta" /> Feta <br />
+                <input type="checkbox" name="cheese" value="cheddar" /> Cheddar <br />
+                <input type="checkbox" name="cheese" value="mozzarella" /> Mozzarella <br />
+                <input type="checkbox" name="cheese" value="veganmozza" /> Vegan Mozza <br />
+            </div>
+            <div id="seafooditems">
+                <h4>Seafood:</h4>
+                <input type="checkbox" name="sea" value="tuna" /> Tuna <br />
+                <input type="checkbox" name="sea" value="shrimp" /> Shrimp <br />
+                <input type="checkbox" name="sea" value="anchovy" /> Anchovy
+            </div>
             <br />
-            <input type="submit" value="Submit">
+            <!-- Sumbit Button for the Form-->
+            <input type="submit" id="formsubmit" value="Submit Order">
         </form>
     </div>
+    <!-- Copyright Footer -->
+    <footer>Copyright © 2020 All Right Reserved Pizza Hotline. Designed By Shenal Dhanusekera</footer>
     <script type="text/javascript" src="javascript/javascript.js">
     </script>
 </body>

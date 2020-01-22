@@ -1,44 +1,46 @@
-﻿.topnav {
+﻿@import "_mixins.scss";
+
+.topnav {
+    @include display_flex;
     overflow: hidden;
-    background-color: black;
+    background-color: $back-color;
     padding: 10px;
-    display: flex;
     justify-content: center;
     position: fixed;
     width: 100%;
     z-index: 1;
-}
 
-.topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 50px;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    background-color: black;
-}
+    a {
+        float: left;
+        display: block;
+        color: $nav-background-color;
+        text-align: center;
+        padding: 14px 50px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        background-color: $back-color;
 
-.topnav a:hover {
-    color: white;
-}
+        &:hover {
+            color: $text-color;
+        }
 
-.topnav a.active {
-    color: white;
-}
+        &:active {
+            color: $text-color;
+        }
+    }
 
-.topnav .icon {
-    display: none;
+    .icon {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 1120px) {
     .topnav {
+        @include display_block;
         overflow: hidden;
         float: left;
-        display: block;
-        background-color: black;
+        background-color: $back-color;
         width: 100%;
     }
 
@@ -47,9 +49,9 @@
     }
 
     .topnav a.icon {
+        @include display_block;
         float: right;
-        display: block;
-        background-color: black;
+        background-color: $back-color;
     }
 }
 
@@ -65,8 +67,8 @@
     }
 
     .topnav.responsive a {
+        @include display_block;
         float: none;
-        display: block;
         text-align: left;
     }
 }

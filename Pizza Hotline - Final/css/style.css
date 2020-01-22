@@ -7,26 +7,22 @@
   position: fixed;
   width: 100%;
   z-index: 1; }
-
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 50px;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-  background-color: black; }
-
-.topnav a:hover {
-  color: white; }
-
-.topnav a.active {
-  color: white; }
-
-.topnav .icon {
-  display: none; }
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 50px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: black; }
+    .topnav a:hover {
+      color: white; }
+    .topnav a:active {
+      color: white; }
+  .topnav .icon {
+    display: none; }
 
 @media screen and (max-width: 1120px) {
   .topnav {

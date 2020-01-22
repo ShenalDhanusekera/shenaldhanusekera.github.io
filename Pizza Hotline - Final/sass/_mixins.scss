@@ -1,1 +1,8 @@
-﻿
+﻿@mixin display_flex() {
+    display: flex;
+    display: -ms-flexbox;
+}
+
+@mixin display_block() {
+    display: block;
+}
